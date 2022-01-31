@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- jQuery UI -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <style>
+            #draggable {
+                width: 100px;
+                height: 100px;
+                padding: 0.5em;
+                float: left;
+                margin: 10px 10px 10px 0;
+                background-color: salmon;
+            }
+            #droppable {
+                width: 150px;
+                height: 150px;
+                padding: 0.5em;
+                float: left;
+                margin: 10px;
+                background-color: darkgray;
+            }
+        </style>
+        <script>
+            $( function() {
+                $( "#draggable").draggable();
+            })
+            $( function() {
+                $("#droppable").droppable({
+                    drop: function(event, ui) {
+                        $(this)
+                        .css("background-color", "red")
+                        .find("p")
+                            .html("Dropped!")
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div id="draggable">
+            <p>Drag me to my target</p>
+        </div>
+        <div id="droppable">
+            <p>Drop here</p>
+        </div>
+    </body>
+</html>

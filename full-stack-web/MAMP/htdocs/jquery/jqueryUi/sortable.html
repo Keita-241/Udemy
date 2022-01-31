@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- jQuery UI -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <style>
+            li{
+                width: 150px;
+                height: 20px;
+                padding: 0.5em;
+                background-color: salmon;
+                margin-top: 10px;
+            }
+        </style>
+        <script>
+            $( function() {
+                $( "#sortable").sortable();
+            })
+        </script>
+    </head>
+    <body>
+        <ul id="sortable">
+            <li>Wilson</li>
+            <li>Babolat</li>
+            <li>Prince</li>
+            <li>Head</li>
+            <li>Dunlop</li>
+        </ul>
+    </body>
+</html>

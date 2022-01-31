@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- jQuery UI -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <style>
+            #resizable, #also {
+                width: 150px;
+                height: 150px;
+                padding: 0.5em;
+                background-color: darkcyan;
+            }
+            #resizable h3, #also h3 {
+                text-align: center;
+                margin: 0;
+                background-color: cornsilk;
+            }
+        </style>
+        <script>
+            $( function() {
+                $( "#resizable").resizable({alsoResize:"#also"});
+            });
+            $( function() {
+                $( "#also").resizable();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="resizable">
+            <h3>Resizable</h3>
+        </div>
+        <div id="also">
+            <h3>一緒に動きます！</h3>
+        </div>
+    </body>
+</html>

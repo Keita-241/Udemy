@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- jQuery UI -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <style>
+            #draggable{
+                width: 150px;
+                height: 150px;
+                padding: 0.5em;
+                background-color: salmon;
+            }
+            #container{
+                width: 800px;
+                height: 500px;
+                background-color: aquamarine;
+            }
+            #draggable2{
+                width: 150px;
+                height: 150px;
+                padding: 0.5em;
+                background-color: coral;
+            }
+        </style>
+        <script>
+            $( function() {
+                $( "#draggable").draggable({axis:"y"});
+                $( "#draggable2").draggable({containment:"parent"});
+            })
+        </script>
+    </head>
+    <body>
+        <div id="draggable">
+            <p>Drag me around</p>
+        </div>
+        <div id="container">
+            <div id="draggable2">このDivは指定された範囲内で動きます</div>
+        </div>
+    </body>
+</html>

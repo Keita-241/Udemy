@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <p id="text">Hello WOrld!</p>
+        <button id="myButton">Change Text!</button>
+
+        <script type="text/JavaScript">
+            document.getElementById('myButton').onclick = function() {
+                document.getElementById('text').innerHTML = "Hello Keita!";
+            }
+        </script>
+
+        <p id="secondParagraph">JavaScriptは、</p>
+        <button id="secondButton">追記する！</button>
+
+        <P id="thirdParagraph">スタイルを変更して見ましょう！</P>
+        <button id="changeStyle">スタイルを変更する！</button>
+        <script type="text/JavaScript">
+            document.getElementById('secondButton').onclick = function () {
+                // document.getElementById('secondParagraph').innerHTML =
+                    // document.getElementById('secondParagraph').innerHTML + "ブラウザでもサーバーでも動作するプログラミング言語です";
+                document.getElementById('secondParagraph').innerHTML += "ブラウザでもサーバーでも動作するプログラミング言語です";
+            }
+
+            document.getElementById('changeStyle').onclick = function () {
+                // document.getElementById('thirdParagraph').style.color = "red";
+                document.getElementById('thirdParagraph').style.display = "none";
+            }
+        </script>
+
+        <script type="text/JavaScript" src="script.js"></script>
+    </body>
+</html>

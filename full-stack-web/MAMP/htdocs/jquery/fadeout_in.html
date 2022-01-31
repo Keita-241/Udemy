@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #fadeInText{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <p id="fadeOutText">このテキストはフェイドアウトします</p>
+        <button id="fadeOut">フェイドアウトする！</button>
+        <p></p>
+        <p id="fadeInText">最初は隠れています</p>
+        <button id="fadeIn">フェイドインする！</button>
+
+        <p id="fadeInOutText">出たり消えたり</p>
+        <button id="fadeInOut">変更！</button>
+
+        <script>
+            $("#fadeOut").click( function () {
+                $("#fadeOutText").fadeOut("slow");
+            });
+            $("#fadeIn").click( function () {
+                $("#fadeInText").fadeIn("slow");
+            });
+            $("#fadeInOut").click( function () {
+                if( $("#fadeInOutText").css("display") == "none") {
+                    $("#fadeInOutText").fadeIn("slow");
+                } else {
+                    $("#fadeInOutText").fadeOut("slow");
+                }
+            });
+        </script>
+    </body>
+</html>

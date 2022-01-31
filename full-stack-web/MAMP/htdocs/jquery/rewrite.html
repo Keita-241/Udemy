@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #circle {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color: green;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <div id="circle"></div>
+
+        <p>ここに文章が入ります。</p>
+
+        <iframe src="https://www.afi-b.com/"></iframe>
+
+        <script>
+            $("div").hover(function () {
+                // $("p").html("divがクリックされました。");
+                // alert($("p").html());
+                $("iframe").attr("src", "https://www.fullspeed.co.jp/");
+            })
+        </script>
+    </body>
+</html>
